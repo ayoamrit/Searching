@@ -30,14 +30,18 @@ public class LinearSearch implements Array{
 
     private void recursiveSearch(int number, int x){
 
+        //creating a base case for the recursion
+        //i.e when x is more than or equals to length of the array
         if(x >= array.length){
             System.out.println(number+" does not exist in the array");
         }
-        else{
+        else{  //general case
+            //if the number we are looking for is found in the array
             if(array[x] == number){
-                System.out.println("Recursive Linear Search: "+array[x]);
+                System.out.println("Recursive Linear Search: "+array[x]);  //printing the number
             }
             else{
+                //calling method again to check the next element of the array
                 recursiveSearch(number, x+1);
             }
         }
